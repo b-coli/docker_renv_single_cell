@@ -16,5 +16,18 @@ RUN apt-get -y install libhdf5-dev
 RUN apt-get -y install r-cran-irkernel 
 RUN apt-get -y install python3-ipykernel
 RUN apt-get -y install jupyter-client
+RUN apt-get -y install wget
+RUN apt-get -y install samtools
+RUN apt-get -y install libboost-all-dev
+
+RUN wget https://github.com/alexdobin/STAR/archive/refs/tags/2.7.10a.tar.gz
+RUN tar -xzvf 2.7.10a.tar.gz
+RUN ln STAR-2.7.10a/bin/Linux_x86_64/STAR /bin/
+RUN rm 2.7.10a.tar.gz
+
+RUN wget https://github.com/gpertea/gffread/releases/download/v0.12.7/gffread-0.12.7.Linux_x86_64.tar.gz
+RUN tar -xvzf gffread-0.12.7.Linux_x86_64.tar.gz
+RUN ln gffread-0.12.7.Linux_x86_64/gffread /bin/
+RUN rm gffread-0.12.7.Linux_x86_64.tar.gz
 
 RUN R -e "source('/install_R_packages.R')"
