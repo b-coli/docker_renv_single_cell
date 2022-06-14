@@ -19,6 +19,7 @@ RUN apt-get -y install jupyter-client
 RUN apt-get -y install wget
 RUN apt-get -y install samtools
 RUN apt-get -y install libboost-all-dev
+RUN apt-get -y install default-jre
 
 RUN wget https://github.com/alexdobin/STAR/archive/refs/tags/2.7.10a.tar.gz
 RUN tar -xzvf 2.7.10a.tar.gz
@@ -29,5 +30,10 @@ RUN wget https://github.com/gpertea/gffread/releases/download/v0.12.7/gffread-0.
 RUN tar -xvzf gffread-0.12.7.Linux_x86_64.tar.gz
 RUN ln gffread-0.12.7.Linux_x86_64/gffread /bin/
 RUN rm gffread-0.12.7.Linux_x86_64.tar.gz
+
+RUN wget https://sourceforge.net/projects/bbmap/files/BBMap_38.96.tar.gz
+RUN tar -xvzf BBMap_38.96.tar.gz
+RUN ln bbmap/*.sh /bin/
+RUN rm BBMap_38.96.tar.gz
 
 RUN R -e "source('/install_R_packages.R')"
