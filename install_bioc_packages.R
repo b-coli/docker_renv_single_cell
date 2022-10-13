@@ -17,6 +17,7 @@ BiocManager::install(
     'Matrix.utils',
     'HDF5Array',
     'terra',
-    'ggrastr'
+    'ggrastr',
+    'celda'
   ), version = "3.15", clean = TRUE
 )
