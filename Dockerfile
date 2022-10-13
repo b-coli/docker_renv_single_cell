@@ -19,11 +19,13 @@ RUN apt-get update && apt-get -y install \
   libglpk40 \
   libhdf5-dev \
   liblzma-dev \
+  libmagick++-dev \
   libncurses-dev \
   libproj-dev \
   libudunits2-dev \
-  libxml2 \	
+  libxml2 \
   libxt-dev \
+  libzmq3-dev \
   python3-pip \
   wget \
   zlib1g-dev \
