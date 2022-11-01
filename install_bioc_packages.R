@@ -18,6 +18,7 @@ BiocManager::install(
     'HDF5Array',
     'terra',
     'ggrastr',
-    'celda'
+    'celda',
+    'GENIE3'
   ), version = "3.15", clean = TRUE
 )
