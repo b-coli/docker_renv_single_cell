@@ -72,9 +72,6 @@ RUN pip install kb-python --no-cache-dir
 RUN pip install ipykernel --no-cache-dir
 
 ADD install_R_packages.R /
-ADD install_bioc_packages.R /
-ADD install_github_packages.R /
+ADD bioc_packages.csv /
 
 RUN R -e "source(\"install_R_packages.R\")"
-RUN R -e "source(\"install_bioc_packages.R\")"
-RUN R -e "source(\"install_github_packages.R\")"
