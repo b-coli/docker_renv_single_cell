@@ -75,3 +75,7 @@ ADD install_R_packages.R /
 ADD bioc_packages.csv /
 
 RUN R -e "source(\"install_R_packages.R\")"
+
+RUN kb compile --tmp /tmp/kb 'all'
+RUN ln -s /usr/local/lib/python3.8/dist-packages/kb_python/bins/compiled/bustools/bustools /usr/local/bin/bustools
+RUN ln -s /usr/local/lib/python3.8/dist-packages/kb_python/bins/compiled/kallisto/kallisto /usr/local/bin/kallisto
