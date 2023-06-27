@@ -17,6 +17,8 @@ remotes::install_version("here", version = "1.0.1", clean = T)
 remotes::install_version("Matrix.utils", version = "0.9.8", clean = T)
 remotes::install_version("SoupX", version = "1.6.2", clean = T)
 
+remotes::install_github("renozao/xbioc", ref = "1354168", clean = T)
+remotes::install_github("meichendong/SCDC", ref = "890c604eebd7fffa4a08d7344fbd516df6efcf8d", clean = TRUE)
 remotes::install_github("mojaveazure/seurat-disk", ref = "9b89970eac2a3bd770e744f63c7763419486b14c", clean = TRUE)
 remotes::install_github("satijalab/seurat-wrappers", ref = "9652bddba522d2f00ec5f8f0f8227761b9a6afd", clean = TRUE)
 remotes::install_github("velocyto-team/velocyto.R", ref = "83e6ed92c2d9c9640122dcebf8ebbb5788165a21", clean = TRUE)
