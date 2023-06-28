@@ -9,6 +9,7 @@ celda
 DelayedArray
 DelayedMatrixStats
 DESeq2
+DEGreport
 DEsingle
 DropletUtils
 eisaR
